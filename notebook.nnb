@@ -39,55 +39,121 @@
             "source": [
                 "import fs from 'fs';\n\nconst myself = fs.readFileSync('./notebook.nnb', {'encoding': 'utf-8'});\nconsole.log(myself);\n"
             ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "/**\n * Hmm.. I am in a temp file somewhere so I'm sure I could overwrite myself\n * this might be more fun with esbuild also, but ill do this I guess\n * \n * How do I upload though, i need a personal access key, I guess I can delete it afterwards\n *\n * Oh  duh, I can just pipe a local file... \n\n*/"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "shellscript",
+            "source": [
+                "stat super_secret.txt"
+            ],
             "outputs": [
                 {
                     "items": [
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
+                                "16777234 3096064 -rw-r--r-- 1 curputer3 staff 0 41 \"Nov 20 18:25:13 2021\" \"Nov 20 18:25:12 2021\" \"Nov 20 18:25:12 2021\" \"Nov 20 18:25:12 2021\" 4096 8 0 super_secret.txt",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "import zx from 'zx';\nimport fs from 'fs';\n\nconst personalToken = fs.readFileSync('./super_secret.txt');\nconst headers = {\n  'Authorization': \"Basic \" + btoa(`quackware:${personalToken}`)\n}\n\n// This should work I think\nasync function fetchDat() {\n\n  const me = await zx.fetch(`https://api.github.com/user`, {headers}).then((r) => r.json()).catch((e) => {})\n  return me;\n}\n\nfetchDat().then((val) => {\n  console.log(val);\n})\nconsole.log(`Stupid thing keeps leaking so im writing here`)\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "shellscript",
+            "source": [
+                "# my brain aint working so we try shell instead\ncat ./super_secret.txt | curl -i -u quackware:$token https://api.github.com/users/me"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stderr",
+                            "value": [
+                                "  % Total    % Received % Xferd  Average Speed   Time  "
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "HTTP/2 200 \r",
+                                "server: GitHub.com\r",
+                                "date: Sat, 20 Nov 2021 23:40:26 GMT\r",
+                                "content-type: application/json; charset=utf-8\r",
+                                "content-length: 1208\r",
+                                "cache-control: public, max-age=60, s-maxage=60\r",
+                                "vary: Accept\r",
+                                "etag: \"282194ddc9d129081e6d624d3081e4c5248b17d8a233ddc449529371d11957e2\"\r",
+                                "last-modified: Mon, 25 Oct 2021 10:25:59 GMT\r",
+                                "x-github-media-type: github.v3; format=json\r",
+                                "x-ratelimit-limit: 60\r",
+                                "x-ratelimit-remaining: 52\r",
+                                "x-ratelimit-reset: 1637454771\r",
+                                "x-ratelimit-used: 8\r",
+                                "x-ratelimit-resource: core\r",
+                                "access-control-expose-headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset\r",
+                                "access-control-allow-origin: *\r",
+                                "strict-transport-security: max-age=31536000; includeSubdomains; preload\r",
+                                "x-frame-options: deny\r",
+                                "x-content-type-options: nosniff\r",
+                                "x-xss-protection: 0\r",
+                                "referrer-policy: origin-when-cross-origin, strict-origin-when-cross-origin\r",
+                                "content-security-policy: default-src 'none'\r",
+                                "vary: Accept-Encoding, Accept, X-Requested-With\r",
+                                "x-github-request-id: C444:4154:9AAD23:11B4EB6:6199876A\r",
+                                "\r",
                                 "{",
-                                "    \"cells\": [",
-                                "        {",
-                                "            \"language\": \"shellscript\",",
-                                "            \"source\": [",
-                                "                \"const zx = require('zx')\"",
-                                "            ],",
-                                "            \"outputs\": [",
-                                "                {",
-                                "                    \"items\": [",
-                                "                        {",
-                                "                            \"mime\": \"application/vnd.code.notebook.stderr\",",
-                                "                            \"value\": [",
-                                "                                \"/bin/sh: -c: line 0: syntax error near unexpected token `('\",",
-                                "                                \"/bin/sh: -c: line 0: `const zx = require('zx')'\",",
-                                "                                \"\"",
-                                "                            ]",
-                                "                        }",
-                                "                    ]",
-                                "                }",
-                                "            ]",
-                                "        },",
-                                "        {",
-                                "            \"language\": \"shellscript\",",
-                                "            \"source\": [",
-                                "                \"npm i zx\"",
-                                "            ],",
-                                "            \"outputs\": [",
-                                "                {",
-                                "                    \"items\": [",
-                                "                        {",
-                                "                            \"mime\": \"application/vnd.code.notebook.stdout\",",
-                                "                            \"value\": [",
-                                "                                \"\",",
-                                "                                \"added 61 packages, and audited 62 packages in 5s\",",
-                                "                                \"\"",
-                                "                            ]",
-                                "                        }",
-                                "                    ]",
-                                "                }",
-                                "            ]",
-                                "        }",
-                                "    ]",
+                                "  \"login\": \"me\",",
+                                "  \"id\": 9734,",
+                                "  \"node_id\": \"MDQ6VXNlcjk3MzQ=\",",
+                                "  \"avatar_url\": \"https://avatars.githubusercontent.com/u/9734?v=4\",",
+                                "  \"gravatar_id\": \"\",",
+                                "  \"url\": \"https://api.github.com/users/me\",",
+                                "  \"html_url\": \"https://github.com/me\",",
+                                "  \"followers_url\": \"https://api.github.com/users/me/followers\",",
+                                "  \"following_url\": \"https://api.github.com/users/me/following{/other_user}\",",
+                                "  \"gists_url\": \"https://api.github.com/users/me/gists{/gist_id}\",",
+                                "  \"starred_url\": \"https://api.github.com/users/me/starred{/owner}{/repo}\",",
+                                "  \"subscriptions_url\": \"https://api.github.com/users/me/subscriptions\",",
+                                "  \"organizations_url\": \"https://api.github.com/users/me/orgs\",",
+                                "  \"repos_url\": \"https://api.github.com/users/me/repos\",",
+                                "  \"events_url\": \"https://api.github.com/users/me/events{/privacy}\",",
+                                "  \"received_events_url\": \"https://api.github.com/users/me/received_events\",",
+                                "  \"type\": \"User\",",
+                                "  \"site_admin\": false,",
+                                "  \"name\": \"Ivan\",",
+                                "  \"company\": null,",
+                                "  \"blog\": \"\",",
+                                "  \"location\": null,",
+                                "  \"email\": null,",
+                                "  \"hireable\": null,",
+                                "  \"bio\": null,",
+                                "  \"twitter_username\": null,",
+                                "  \"public_repos\": 44,",
+                                "  \"public_gists\": 5,",
+                                "  \"followers\": 30,",
+                                "  \"following\": 0,",
+                                "  \"created_at\": \"2008-05-08T21:43:54Z\",",
+                                "  \"updated_at\": \"2021-10-25T10:25:59Z\"",
                                 "}",
                                 ""
                             ]
@@ -99,33 +165,12 @@
         {
             "language": "markdown",
             "source": [
-                "go away package.json"
-            ],
-            "outputs": []
-        },
-        {
-            "language": "markdown",
-            "source": [
-                ""
+                "### Nice so we can do a quick auth check for github\n\nSo what did we want to do again? oh yeah some inception stuffs"
             ],
             "outputs": []
         },
         {
             "language": "shellscript",
-            "source": [
-                "zx`rm package.json && rm package-lock.json`"
-            ],
-            "outputs": []
-        },
-        {
-            "language": "markdown",
-            "source": [
-                ""
-            ],
-            "outputs": []
-        },
-        {
-            "language": "typescript",
             "source": [
                 ""
             ],
