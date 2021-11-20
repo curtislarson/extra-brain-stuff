@@ -1,0 +1,135 @@
+{
+    "cells": [
+        {
+            "language": "shellscript",
+            "source": [
+                "npm i zx shiki shiki-twoslash"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                "added 14 packages, and audited 76 packages in 3s",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "import {getHighlighter} from 'shiki';\n\n\ngetHighlighter({\n  theme: 'nord'\n}).then(h => {\n  console.log(h.codeToHtml(`console.log(\"Hello World\");`))\n});\n\n/**\n * oh cool it actually worked, \n * I wonder if I can force it to show up in a cell below\n */"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "import fs from 'fs';\n\nconst myself = fs.readFileSync('./notebook.nnb', {'encoding': 'utf-8'});\nconsole.log(myself);\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{",
+                                "    \"cells\": [",
+                                "        {",
+                                "            \"language\": \"shellscript\",",
+                                "            \"source\": [",
+                                "                \"const zx = require('zx')\"",
+                                "            ],",
+                                "            \"outputs\": [",
+                                "                {",
+                                "                    \"items\": [",
+                                "                        {",
+                                "                            \"mime\": \"application/vnd.code.notebook.stderr\",",
+                                "                            \"value\": [",
+                                "                                \"/bin/sh: -c: line 0: syntax error near unexpected token `('\",",
+                                "                                \"/bin/sh: -c: line 0: `const zx = require('zx')'\",",
+                                "                                \"\"",
+                                "                            ]",
+                                "                        }",
+                                "                    ]",
+                                "                }",
+                                "            ]",
+                                "        },",
+                                "        {",
+                                "            \"language\": \"shellscript\",",
+                                "            \"source\": [",
+                                "                \"npm i zx\"",
+                                "            ],",
+                                "            \"outputs\": [",
+                                "                {",
+                                "                    \"items\": [",
+                                "                        {",
+                                "                            \"mime\": \"application/vnd.code.notebook.stdout\",",
+                                "                            \"value\": [",
+                                "                                \"\",",
+                                "                                \"added 61 packages, and audited 62 packages in 5s\",",
+                                "                                \"\"",
+                                "                            ]",
+                                "                        }",
+                                "                    ]",
+                                "                }",
+                                "            ]",
+                                "        }",
+                                "    ]",
+                                "}",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "go away package.json"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "shellscript",
+            "source": [
+                "zx`rm package.json && rm package-lock.json`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
