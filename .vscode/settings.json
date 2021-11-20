@@ -25,4 +25,20 @@
   "spellright.notificationClass": "warning",
   "vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
   "vscodeMarkdownNotes.slugifyMethod": "github-slugger",
+  "workbench.colorCustomizations": {
+    "sash.hoverBorder": "#ff748c",
+    "statusBar.background": "#ff4162",
+    "statusBar.border": "#ff4162",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#ff748c",
+    "statusBarItem.remoteBackground": "#ff4162",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "tab.activeBorder": "#ff748c",
+    "titleBar.activeBackground": "#ff4162",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.border": "#ff4162",
+    "titleBar.inactiveBackground": "#ff416299",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#FF4162"
 }
