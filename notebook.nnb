@@ -170,7 +170,46 @@
             "outputs": []
         },
         {
-            "language": "shellscript",
+            "language": "typescript",
+            "source": [
+                "/**\n * OK, lets planit out a sec. So we can grab our last block location which is where this text is now and process it. As long\n * as we save right before it should be up to date. Also I guess I can just shell out the git commands since it's my own repo\n * \n * ooook cool finally found the url `PUT /repos/{owner}/{repo}/contents/{path}` and we are currently at\n * /extra-brain-stuff/notebook.nnb I think...\n */\nimport { cwd } from \"process\";\n\ncwd();"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[32m'/Users/curputer3/Documents/extra-brain-stuff'\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "/**\n * Nice ok so lets buil the request first\n * I think I'll update the readme and try to convert this file to markdown since node notebooks dont display on GH :(\n */\nimport zx from 'zx';\nimport fs from 'fs';\n\n\nconst updateReadme = (datas: string) => {\n  // im still scared of fetch in notebook\n  const putResult = await zx.$`cat ./super_secret.txt | curl -i -u -X PUT quackware:$token https://api.github.com/repos/quackware/quackware/contents/README.md`;\n}\n\n  // ok i think we assume if aboe runs good then we updated the readme\n  // now lets check ourselves out\n  const checkOurselvesOut = () => JSON.parse(fs.readFileSync('./notebook.nnb', {'encoding': 'utf-8'}));\n\n  // and that's probably the scariest json ever, very tempting to break this in half but naah\n  // ok actually doesnt look too bad\n\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "```json\n        },\n        {\n            \"language\": \"typescript\",\n            \"source\": [\n                \"/**\\n * Nice ok so lets buil the request first\\n * I think I'll update the readme and try to convert this file to markdown since node \nnotebooks dont display on GH :(\\n */\\nimport zx from 'zx';\\nimport fs from 'fs';\\n\\n\\nconst updateReadme = (datas: string) => {\\n  // im still scared o\nf fetch in notebook\\n  const putResult = await zx.$`cat ./super_secret.txt | curl -i -u -X PUT quackware:$token https://api.github.com/repos/quackware/\nquackware/contents/README.md`;\\n}\\n\\n  // ok i think we assume if aboe runs good then we updated the readme\\n  // now lets check ourselves out\\n  const\n checkOurselvesOut = () => JSON.parse(fs.readFileSync('./notebook.nnb', {'encoding': 'utf-8'}));\\n\\n  // and that's probably the scariest json ever\\n  \n\\n\\n\"\n            ],\n            \"outputs\": []\n        }\n    ]\n}\n```\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
             "source": [
                 ""
             ],
