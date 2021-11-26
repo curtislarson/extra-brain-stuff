@@ -1,0 +1,8 @@
+- Split panes by pressing prefix + % and prefix + ".
+- Kill panes by pressing prefix + x.
+- Switch panes with prefix + arrow.
+- Create new windows by pressing prefix + c.
+- Switch windows by pressing prefix + number.
+- Rename windows with prefix + ,
+- Zoom in and out a pane with prefix + z
+- Detach with prefix + d and reattach with tmux.

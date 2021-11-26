@@ -1,5 +1,10 @@
 # Extra Brain Stuff
 
-At least until I get bored, or my brain does
+A place to put thoughts I may want to think about later.
 
-So far the VS Code extensino brough my brand new macbook to a standstill.. So you could say it's going well
+## Motivation
+
+1. Helps me deal with information overload
+2. I can use this as an excuse to work on presentation software.
+
+---

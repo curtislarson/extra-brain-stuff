@@ -1,0 +1,104 @@
+{
+    "cells": [
+        {
+            "language": "shellscript",
+            "source": [
+                "npm i '@typescript/vfs' esbuild;"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                "added 27 packages, and audited 107 packages in 2s",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "import { cwd } from 'process';\nimport { transformSync } from 'esbuild';\nimport { readFileSync } from 'fs';\n\nimport('zx/globals');\n\n$.shell = '/bin/zsh';\n\nconst gron = (fileName: string) => $`gron ${fileName}`;\n\ncwd();\n\n\ntype NotebookResponse = {\n  cells: {\n    language: 'shellscript' | 'typescript' | 'javascript';\n    source: string[]\n  }[]\n};\nconst checkOurselvesOut = (): NotebookResponse => {\n  return JSON.parse(readFileSync('./notebook2.nnb', {'encoding': 'utf-8'}))\n}\n\nconst typescriptCells = (response: NotebookResponse) => response.cells.filter((cell) => cell.language === 'typescript').flatMap((cell) => cell.source).join('\\n');\n\n\nconst ourSelves = checkOurselvesOut();\nconst tsOurselves = typescriptCells(ourSelves);\n// const cells = ourSelves['cells'][0];\nconsole.log(typescriptCells(ourSelves));\nconst transformed = transformSync(tsOurselves);\nconsole.log(transformed);\n\n// console.log(ourSelves['cells'], transformed);\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "import { cwd } from 'process';",
+                                "import { transformSync } from 'esbuild';",
+                                "import { readFileSync } from 'fs';",
+                                "",
+                                "import('zx/globals');",
+                                "",
+                                "$.shell = '/bin/zsh';",
+                                "",
+                                "const gron = (fileName: string) => $`gron ${fileName}`;",
+                                "",
+                                "cwd();",
+                                "",
+                                "",
+                                "type NotebookResponse = {",
+                                "  cells: {",
+                                "    language: 'shellscript' | 'typescript' | 'javascript';",
+                                "    source: string[]",
+                                "  }[]",
+                                "};",
+                                "const checkOurselvesOut = (): NotebookResponse => {",
+                                "  return JSON.parse(readFileSync('./notebook2.nnb', {'encoding': 'utf-8'}))",
+                                "}",
+                                "",
+                                "const typescriptCells = (response: NotebookResponse) => response.cells.filter((cell) => cell.language === 'typescript').flatMap((cell) => cell.source).join('\\n');",
+                                "",
+                                "",
+                                "const ourSelves = checkOurselvesOut();",
+                                "const tsOurselves = typescriptCells(ourSelves);",
+                                "// const cells = ourSelves['cells'][0];",
+                                "console.log(typescriptCells(ourSelves));",
+                                "const transformed = transformSync(tsOurselves)",
+                                "",
+                                "// console.log(ourSelves['cells'], transformed);",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "Error",
+                                "message": "Transform failed with 1 error:\n<stdin>:9:22: error: Expected \")\" but found \":\"",
+                                "stack": "    at failureErrorWithLog (/Users/curputer3/Documents/extra-brain-stuff/node_modules/esbuild/lib/main.js:1493:15)\n    at /Users/curputer3/Documents/extra-brain-stuff/node_modules/esbuild/lib/main.js:1282:29\n    at /Users/curputer3/Documents/extra-brain-stuff/node_modules/esbuild/lib/main.js:629:9\n    at handleIncomingPacket (/Users/curputer3/Documents/extra-brain-stuff/node_modules/esbuild/lib/main.js:726:9)\n    at Socket.readFromStdout (/Users/curputer3/Documents/extra-brain-stuff/node_modules/esbuild/lib/main.js:596:7)\n    at Socket.emit (node:events:394:28)\n    at addChunk (node:internal/streams/readable:315:12)\n    at readableAddChunk (node:internal/streams/readable:289:9)\n    at Socket.Readable.push (node:internal/streams/readable:228:10)\n    at Pipe.onStreamRead (node:internal/stream_base_commons:199:23)"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
