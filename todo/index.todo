@@ -9,3 +9,10 @@ Uncategorized:
   [ ] svg term utils for documentation
   [ ] Executable markdown for runbooks
   [ ] Find a templating engine that I don't hate
+
+API Clients:
+  [ ] Toggl
+  [ ] Freshbooks
+
+DEF:
+  [ ] write a small script to retrieve all my github stars and put in a csv or markdown

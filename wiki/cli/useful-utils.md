@@ -1,4 +1,4 @@
-# CLI Links
+# Links
 
 ## [bat](https://github.com/sharkdp/bat)
 
@@ -71,6 +71,8 @@ The ole classic
 ```zsh
 brew install jq
 ```
+
+[jq Cheat Sheet](https://lzone.de/cheat-sheet/jq)
 
 ## [tldr](https://github.com/tldr-pages/tldr)
 
