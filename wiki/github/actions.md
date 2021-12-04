@@ -1,3 +1,5 @@
+# Github Actions
+
 ## Notes
 
 - Github actions has a lot of software pre-installed in their runners that you can use (including stuff like mySQL). See [This Link](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md) for more info.

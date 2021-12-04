@@ -1,3 +1,5 @@
+# SSM
+
 ## Notes
 
 - Easily store credentials, shouldn't cost anything
