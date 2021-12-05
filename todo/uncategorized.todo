@@ -1,16 +1,8 @@
 
 Uncategorized:
-  [ ] Markdown processing with [MicroMark](https://github.com/micromark/micromark)
-  [ ] [Dockerode](https://github.com/apocas/dockerode) infra
   [ ] Grok the [HAR 1.2](http://www.softwareishard.com/blog/har-12-spec/) spec and setup some fun stuff with [Polly](https://github.com/Netflix/pollyjs)
   [ ] Tabnine code autocomplete search
   [ ] svg term utils for documentation
   [ ] Executable markdown for runbooks
   [ ] Find a templating engine that I don't hate
 
-API Clients:
-  [ ] Toggl
-  [ ] Freshbooks
-
-DEF:
-  [ ] write a small script to retrieve all my github stars and put in a csv or markdown

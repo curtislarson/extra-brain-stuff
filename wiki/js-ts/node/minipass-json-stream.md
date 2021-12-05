@@ -1,2 +1,0 @@
-# minipass-json-stream
-
