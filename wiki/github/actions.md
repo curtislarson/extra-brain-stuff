@@ -8,3 +8,6 @@
 - If you hit error 255 and have aws functionality and are running ubuntu `20.04` setting the env variable `AWS_EC2_METADATA_DISABLED=true` should fix it
 
 ## Links
+
+- [Ubuntu 20.04.3 Installed Software List](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md)
+- [Virtual Env Repo](https://github.com/actions/virtual-environments)

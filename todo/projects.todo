@@ -1,4 +1,4 @@
 Projects:
-  [] Markdown processing with [MicroMark](https://github.com/micromark/micromark)
-  [] Dockerode infra
-  [] write a small script to retrieve all my github stars and put in a csv or markdown
+  [] write my own version of `zx` or `dzx` that specializes in markdown parsing
+    - Related: parse and tag `inbox.md` and put into `inbox` folder
+  [] DefinitelyJsonSchemas

@@ -1,4 +1,6 @@
-# Links
+# Useful Utils
+
+## Links
 
 ## [bat](https://github.com/sharkdp/bat)
 
@@ -80,6 +82,8 @@ brew install jq
 npm install -g tldr
 alias help='tldr'
 ```
+
+## [z](https://github.com/rupa/z)
 
 ---
 

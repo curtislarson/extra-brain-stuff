@@ -1,4 +1,4 @@
-# Extra Brain Stuff
+# Brain
 
 A place to put thoughts I may want to think about later.
 
@@ -17,6 +17,6 @@ Semi-organized collection
 
 Todo lists
 
-### [`stash`](stash.md)
+### [`inbox`](inbox.md)
 
 For things I have yet to categorize

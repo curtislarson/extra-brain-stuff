@@ -1,0 +1,5 @@
+# Codegen
+
+## Notes
+
+- Angular schematics
