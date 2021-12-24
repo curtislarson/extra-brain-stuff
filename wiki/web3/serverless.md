@@ -8,6 +8,7 @@
 - Deno Deploy
 - GCS Functions
 - Digital Ocean Apps
+- [fly.io](https://fly.io/)
 
 ## Links
 

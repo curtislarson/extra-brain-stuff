@@ -32,3 +32,5 @@ http://cs.brown.edu/research/aurora/hwang.icde05.ha.pdf
 http://samza.incubator.apache.org/learn/documentation/0.7.0/container/samza-container.html
 
 The hierarchy for a Samza's job data model is that jobs have containers, and containers have tasks. Each data model contains relevant information, such as an id, partition information, etc.
+
+https://code.visualstudio.com/api/extension-guides/custom-data-extension

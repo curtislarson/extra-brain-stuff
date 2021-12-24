@@ -3,4 +3,3 @@
   - Unified gives us remark, retext, rehype, etc with the markdown ecosystem
   - We can do text extraction
 - We can patch AST
-- https://github.com/xcatliu/pagic
