@@ -4,3 +4,4 @@ Research:
   [] Grok the [HAR 1.2](http://www.softwareishard.com/blog/har-12-spec/) spec and setup some fun stuff with [Polly](https://github.com/Netflix/pollyjs)
   [] Tabnine code autocomplete search
   [] svg term utils for documentation
+  [] research the costs of data egress in the different cloud services

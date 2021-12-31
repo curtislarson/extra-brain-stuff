@@ -1,5 +1,6 @@
 # Codegen
 
-## Notes
+## Links
 
-- Angular schematics
+- [nestjs schematics](https://github.com/nestjs/schematics)
+  - Uses angular schematics, based on json schema
