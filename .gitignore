@@ -1,6 +1,3 @@
-node_modules
-_private
-package.json
-package-lock.json
-.vscode
+*.code-workspace
 .DS_Store
+node_modules

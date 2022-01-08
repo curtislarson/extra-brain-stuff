@@ -1,0 +1,6 @@
+[
+  {
+    "key": "alt+shift+n",
+    "command": "vscodeMarkdownNotes.newNote"
+  }
+]
