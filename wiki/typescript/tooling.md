@@ -33,8 +33,6 @@ Enjoyed playing around with their dev tooling. I think some serious projects cou
 
 - Language server index format
 
-
-
 ### parcel
 
 have not tried yet, they have clean code but use flow
