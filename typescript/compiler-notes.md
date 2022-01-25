@@ -9,3 +9,15 @@
 ## Links
 
 - [TypeScript Compiler Internals](https://basarat.gitbook.io/typescript/overview)
+
+### Some interesting functions
+
+- [NodeTypingsInstaller](https://github.com/microsoft/TypeScript/blob/main/src/tsserver/nodeServer.ts#L415) - seems like a good spot to inject code in via the typings installer. It's communicated with via node ipc so we should be able to talk to it. It also stores a "safe list" as just a json file that it seems to trust more for some reason.
+
+Another version of [NodeTypingsInstaller](https://github.com/quackware/TypeScript/blob/main/src/typingsInstaller/nodeTypingsInstaller.ts#L79)
+
+[typingsInstaller.ts](https://github.com/quackware/TypeScript/blob/main/src/typingsInstallerCore/typingsInstaller.ts)
+
+[extractWatchDirectoryCacheKey](https://github.com/microsoft/TypeScript/blob/main/src/tsserver/nodeServer.ts#L338)
+
+- Looks like Parcel tries to poke typescript enough times until it generates validators / typings for them (https://github.com/parcel-bundler/parcel/blob/v2/packages/validators/typescript/src/TypeScriptValidator.js)
