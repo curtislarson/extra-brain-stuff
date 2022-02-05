@@ -9,6 +9,7 @@
 - `npx --ws -- eslint ./*.js` commands like this run in the context of each workspace
 - `npx` has an interesting caching method. It looks like they genreate a package.json on the fly to make it easier to run the cli command?
 - `npm run env -ws` prints env variables with the inserted `npm` ones for each package
+- `npx` retrieves tarballs by default from regular urls (ie <kbd>npx https://curtis.computer</kbd>
 
 ## Links
 
@@ -16,3 +17,4 @@
 - [npm-registry-fetch](https://www.npmjs.com/package/npm-registry-fetch)
 - [promzard](https://github.com/npm/promzard) - prompting wizard for building files (used by npm)
 - [init-pack-json](https://www.npmjs.com/package/init-package-json) - package.json creator
+- [algolia powered npm search](https://github.com/algolia/npm-search)

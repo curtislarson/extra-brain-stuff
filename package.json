@@ -1,5 +1,6 @@
 {
   "name": "curtis.wiki",
+  "description": "Wiki something",
   "repository": {
     "url": "https://github.com/quackware/extra-brain-stuff"
   }
