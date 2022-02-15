@@ -8,7 +8,11 @@
 
 - If you hit error 255 and have aws functionality and are running ubuntu `20.04` setting the env variable `AWS_EC2_METADATA_DISABLED=true` should fix it
 
-- TODO: See if we can use a [custom shell](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#custom-shell) combined with [defaults.run](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#defaultsrun)
+- `workflow_run` will run a workflow after the completion of a previous workflow. The workflow has the same payload as the calling workflow
+
+- `workflow_dispatch` is triggered via api call, gh cli, or web interface.
+
+- `workflow_call` is a workflow that can be called or used by other workflows and does not run by itself
 
 ## Links
 
